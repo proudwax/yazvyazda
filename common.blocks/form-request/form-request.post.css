@@ -1,0 +1,35 @@
+:block(form-request){
+    position: relative;
+    z-index: 10;
+
+    &:elem(container){
+        padding-top: 30px;
+        background: #fff;
+    }
+
+    &:elem(close){
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        background-image: url('images/close.svg');
+        background-color: inherit;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        opacity: .3;
+        transition: opacity .3s ease;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    &:elem(field){
+        margin: 10px;
+    }
+}

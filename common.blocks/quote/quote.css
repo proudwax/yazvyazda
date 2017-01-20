@@ -1,0 +1,66 @@
+
+
+.quote__container {
+    box-sizing: border-box;
+    background: #fff;
+    padding: 10px;
+}
+
+.quote__tagline {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    position: relative;
+}
+
+.quote__author {
+    font-size: 13px;
+    line-height: 15px;
+    text-align: right;
+    font-style: italic;
+}
+
+
+@media only screen and (min-width: 420px) {
+    .quote__container {
+        padding: 20px 40px;
+    }
+
+    .quote__tagline {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .quote__container {
+        padding: 20px 40px;
+    }
+
+    .quote__tagline {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .quote__container {
+        padding: 50px 100px;
+    }
+
+    .quote__tagline {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .quote__container {
+        padding: 50px 100px;
+    }
+
+    .quote__tagline {
+        font-size: 48px;
+        line-height: 58px;
+    }
+}

@@ -1,0 +1,6 @@
+({
+    shouldDeps: [
+        'logo',
+        'request-action'
+    ]
+})

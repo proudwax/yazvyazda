@@ -1,0 +1,12 @@
+:block(image){
+	max-width: 100%;
+
+	&:mod(loaded){
+		display: none !important;
+	}
+
+	&:mod(spin){
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+}

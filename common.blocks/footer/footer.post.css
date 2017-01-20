@@ -1,0 +1,21 @@
+:block(footer){
+    position: relative;
+    font-size: 13px;
+    line-height: 15px;
+
+    &:elem(container){
+        background: #424242;
+    }
+
+    &:elem(copyright){
+        padding: 10px;
+    }
+
+    &:elem(logo){
+        padding: 10px;
+    }
+
+    &:elem(request){
+        padding: 10px;
+    }
+}
