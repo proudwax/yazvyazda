@@ -1,9 +1,8 @@
 {
     "freeze_paths" : {
-        "*.blocks/**/fonts/**": "static/fonts",
-        "*.blocks/**/images/**": "static/images",
+        "node_modules/**": ":base64:",
+        "node_modules/**/*.svg": ":encodeURIComponent:",
         "*.blocks/**": ":base64:",
         "*.blocks/**/*.svg": ":encodeURIComponent:"
-    },
-    "freeze_nesting_level": 1
+    }
 }
