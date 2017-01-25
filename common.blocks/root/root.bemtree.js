@@ -4,10 +4,10 @@ block('root').replace()(function() {
         title: 'TODO',
         favicon: '/favicon.ico',
         styles: [
-            { elem: 'css', url: 'main.min.css' }
+            { elem: 'css', url: 'index.min.css' }
         ],
         scripts: [
-            { elem: 'js', url: 'main.min.js' }
+            { elem: 'js', url: 'index.min.js' }
         ],
         head: [
             { elem: 'meta', attrs: { name: 'description', content: '' } },

@@ -10,15 +10,28 @@ provide(bemDom.declBlock(this.name, {
 				this
 					.setMod('lazy', true)
 					._onLoad();
+
+				if(bemDom.win.scrollTop() < this._offsetShow){
+					throttle(this._domEvents(bemDom.win).on('scroll resize', function(e){
+						this._offsetShow = this.domElem.offset().top - bemDom.win.height();
+						this._onLoad();
+						console.log(this._offsetShow);
+					}), 300);
+				}
             }
         },
 
 		'lazy': {
-			true: function(){
-				throttle(this._domEvents(bemDom.win).on('scroll resize', function(e){
+			// не работает, пока не разобрался почему
+			true : function(){
+				throttle(this._domEvents(bemDom.win).on('', function(e){
 					this._offsetShow = this.domElem.offset().top - bemDom.win.height();
-					this._onLoad();
+					console.log(this._offsetShow);
 				}), 300);
+			},
+
+			'': function () {
+				this._domEvents(bemDom.win).un('scroll resize');
 			}
 		},
 
@@ -58,7 +71,7 @@ provide(bemDom.declBlock(this.name, {
 		if(bemDom.win.scrollTop() >= this._offsetShow){
 			this.setMod('loading')
 				.delMod('lazy')
-				._domEvents(bemDom.win).un('scroll resize');
+				// ._domEvents(bemDom.win).un('scroll resize');
 		}
 	},
 
