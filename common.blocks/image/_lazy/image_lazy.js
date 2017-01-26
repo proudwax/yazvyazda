@@ -1,14 +1,16 @@
 modules.define('image', ['i-bem-dom', 'jquery', 'BEMHTML', 'functions__throttle'], function(provide, bemDom, $, BEMHTML, throttle) {
 
 provide(bemDom.declBlock(this.name, {
-// provide(BEMDOM.decl({ modName : 'lazy', modVal : true }, {
 	onSetMod : {
 		'js': {
             'inited': function(){
+				// https://ru.bem.info/platform/i-bem/context/#Вспомогательные-свойства
+                // __base — для вызова реализации одноимённого метода из базового класса, от которого наследуется данный (super call).
+                this.__base.apply(this, arguments);
+
 				this._offsetShow = this.domElem.offset().top - bemDom.win.height();
 
 				this
-					.setMod('lazy', true)
 					._onLoad();
 
 				if(bemDom.win.scrollTop() < this._offsetShow){

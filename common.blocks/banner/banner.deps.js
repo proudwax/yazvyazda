@@ -1,6 +1,6 @@
 ({
     shouldDeps: [
-        'image',
+        { block: 'image', mods: { lazy: true } },
         // 'request-action'
     ]
 })
