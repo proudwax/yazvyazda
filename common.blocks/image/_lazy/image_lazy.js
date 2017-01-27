@@ -17,7 +17,6 @@ provide(bemDom.declBlock(this.name, {
 					throttle(this._domEvents(bemDom.win).on('scroll resize', function(e){
 						this._offsetShow = this.domElem.offset().top - bemDom.win.height();
 						this._onLoad();
-						console.log(this._offsetShow);
 					}), 300);
 				}
             }
@@ -28,7 +27,6 @@ provide(bemDom.declBlock(this.name, {
 			true : function(){
 				throttle(this._domEvents(bemDom.win).on('', function(e){
 					this._offsetShow = this.domElem.offset().top - bemDom.win.height();
-					console.log(this._offsetShow);
 				}), 300);
 			},
 
