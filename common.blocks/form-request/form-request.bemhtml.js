@@ -7,7 +7,14 @@ block('form-request')(
             {
                 elem: 'close',
             },
-            applyNext()
+            applyNext(),
+            {
+                elem: 'recaptcha',
+                content: {
+                    block: 'recaptcha',
+                    content: ''
+                }
+            }
         ]
     }),
 
